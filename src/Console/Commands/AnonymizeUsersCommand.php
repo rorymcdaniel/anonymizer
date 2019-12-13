@@ -32,8 +32,8 @@ class AnonymizeUsersCommand extends Command
      */
     public function __construct(Faker $faker)
     {
-        parent::__construct();
         $this->faker = $faker;
+        parent::__construct();
     }
 
     /**
