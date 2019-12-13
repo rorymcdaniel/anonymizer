@@ -5,7 +5,7 @@ namespace Rorymcdaniel\Anonymizer\Console\Commands;
 use Illuminate\Console\Command;
 use Faker\Generator as Faker;
 
-class AnonymizeUsers extends Command
+class AnonymizeUsersCommand extends Command
 {
     /**
      * The name and signature of the console command.

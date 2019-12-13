@@ -3,6 +3,7 @@
 namespace Rorymcdaniel\Anonymizer;
 
 use Illuminate\Support\ServiceProvider;
+use Rorymcdaniel\Anonymizer\Console\Commands\AnonymizeUsersCommand;
 
 class AnonymizerServiceProvider extends ServiceProvider
 {
@@ -40,7 +41,9 @@ class AnonymizerServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-            // $this->commands([]);
+            $this->commands([
+                AnonymizeUsersCommand::class,
+            ]);
         }
     }
 
