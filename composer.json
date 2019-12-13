@@ -1,0 +1,55 @@
+{
+    "name": "rorymcdaniel/anonymizer",
+    "description": "A package that will take real data and replace it with generated fake data.",
+    "keywords": [
+        "rorymcdaniel",
+        "anonymizer"
+    ],
+    "homepage": "https://github.com/rorymcdaniel/anonymizer",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Rory McDaniel",
+            "email": "hoyer801@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*|6.*",
+        "illuminate/console": "5.8.*|6.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rorymcdaniel\\Anonymizer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rorymcdaniel\\Anonymizer\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rorymcdaniel\\Anonymizer\\AnonymizerServiceProvider"
+            ],
+            "aliases": {
+                "Anonymizer": "Rorymcdaniel\\Anonymizer\\AnonymizerFacade"
+            }
+        }
+    }
+}
